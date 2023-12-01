@@ -13,10 +13,10 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
 	size_t path_first_length = 0;
 
 	if (first == NULL || second == NULL)
-		return NULL;
+		return (NULL);
 
 	if (first == second)
-		return (binary_tree_t *)first;
+		return ((binary_tree_t *)first);
 
 	while (first != NULL)
 	{
@@ -29,7 +29,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
 		for (size_t i = 0; i < path_first_length; ++i)
 		{
 			if (path_first[i] == second)
-				return (binary_tree_t *)second;
+				return ((binary_tree_t *)second);
 		}
 
 		second = second->parent;
